@@ -1,0 +1,19 @@
+footer {
+  background-color: #00000094;
+  color: #FFF;
+}
+
+.footer-title {
+  font-size: 28px;
+  max-width: 500px;
+  padding-top: 18px;
+  margin: auto;
+}
+
+.footer-copyright {
+  max-width: 300px;
+  margin: auto;
+  font-size: 18px;
+  margin-top: 18px;
+  padding-bottom: 18px;
+}
