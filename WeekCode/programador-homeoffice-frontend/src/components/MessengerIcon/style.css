@@ -1,0 +1,34 @@
+.messenger {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  color: #0062ff;
+}
+
+.messenger img {
+  width: 64px;
+}
+
+.messenger-text {
+  background-color: #ffffff98;
+  position: absolute;
+  width: 230px;
+  right: 110px;
+  bottom: -3px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.messenger span {
+  position: absolute;
+  right: 85px;
+  bottom: 10px;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid #ffffff98;
+}
+
+.messenger-text p {
+  font-size: 14px;
+  margin: 0;
+}

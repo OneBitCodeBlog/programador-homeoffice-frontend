@@ -1,0 +1,20 @@
+nav {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  height: 50px;
+  background-color: #0000004b;
+  text-align: center;
+}
+
+.nav-buttons {
+  margin: auto;
+  text-align: center;
+  color: #FFF;
+}
+
+nav a {
+  font-size: 18px;
+  color: #FFF;
+  text-decoration: none;
+}
