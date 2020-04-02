@@ -4,13 +4,12 @@ import './index.css';
 
 export default function AboutContent() {
   return (
-    <section className="text-center">
-      <section className="page-header mt-3">
+    <section className="text-center about">
+      <section className=" col-md-4 offset-md-4 page-header mt-3">
         <h4>Quem Somos</h4>
-        <hr />
       </section>
 
-      <section className="container">
+      <section className="container mt-4">
         <p>
           Somos uma equipe de startup com o objetivo de centralizar as melhores
           vagas disponíveis em outras plataformas e apresentá-las de maneira
@@ -23,9 +22,8 @@ export default function AboutContent() {
       </section>
 
       <section className="github mt-5">
-        <section className="page-header p-3">
+        <section className="page-header p-1">
           <h4>Colaboradores do Projeto</h4>
-          <hr />
         </section>
 
         <section className="list container">
