@@ -1,0 +1,6 @@
+.jobs-container {
+  min-height: calc(100vh - 50px - 122px);
+  max-width: 700px;
+  margin: auto;
+  margin-top: 24px;
+}
