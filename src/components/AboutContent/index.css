@@ -20,3 +20,12 @@ a {
 a:hover {
 	color: white;
 }
+
+.github-btn {
+	background-color: #000000;
+	padding: 6px;
+	height: 33px;
+	width: 60px;
+	border-radius: 20px;
+
+}
