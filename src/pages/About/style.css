@@ -1,0 +1,46 @@
+.about {
+	color: white;
+	background-color: rgba(10,10,10,0.4);
+	padding: 20px 0px;
+}
+
+.about .container {
+	font-size: 1.1em;
+}
+
+.github {
+	background-color: rgba(10,10,10,0.5);
+	padding: 20px;
+}
+
+.page-header {
+	border-bottom: 1px solid white;
+}
+
+.col-6 img {
+	width: 60px!important;
+	margin-left: 30px;
+	border-radius: 30px;
+}
+
+.col-6 a {
+	display: block;
+	margin: 10px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: white;
+}
+
+.github-btn {
+	background-color: #000000;
+	padding: 6px;
+	height: 33px;
+	width: 60px;
+	border-radius: 20px;
+
+}
