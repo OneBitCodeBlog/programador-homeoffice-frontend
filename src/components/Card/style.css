@@ -29,8 +29,12 @@
   margin-right: 8px;
 }
 
-.card-text {
+.row > .col-md-6 > .card-text, .row > .col-md-6 > .card-location {
   padding: 8px 16px;
+}
+
+.row > .col-md-6 > .card-text span, .row > .col-md-6 > .card-location span {
+  padding: 0px 15px;
 }
 
 .card-locale {
