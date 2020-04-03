@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import MessengerIcon from '../../components/MessengerIcon';
 import Card from '../../components/Card';
+import Form from '../../components/Form';
 
 export default function Jobs() {
   return (
@@ -22,6 +23,8 @@ export default function Jobs() {
             ideal e trabalhe em qualquer lugar do mundo!
           </p>
         </section>
+
+        <Form />
 
         <div className="jobs-container">
           {[0, 1, 2, 3, 4].map((job) => (

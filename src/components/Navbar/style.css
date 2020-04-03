@@ -13,6 +13,10 @@ nav {
   color: #FFF;
 }
 
+.nav-buttons a {
+  padding: 0px 20px;
+}
+
 nav a {
   font-size: 18px;
   color: #FFF;
