@@ -1,46 +1,40 @@
 .about {
 	color: white;
-	background-color: rgba(10,10,10,0.4);
 	padding: 20px 0px;
+	text-align: center;
+	max-width: 800px;
+	margin: auto;
 }
 
-.about .container {
-	font-size: 1.1em;
-}
 
-.github {
-	background-color: rgba(10,10,10,0.5);
+
+.colaborators {
+	background-color: rgba(10,10,10,.5);
 	padding: 20px;
 }
 
-.page-header {
-	border-bottom: 1px solid white;
+
+.colaborators-profiles {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
-.col-6 img {
-	width: 60px!important;
-	margin-left: 30px;
-	border-radius: 30px;
-}
-
-.col-6 a {
-	display: block;
+.profile {
 	margin: 10px;
+	display: flex;
+	margin: 10px auto;
+	font-size: 17px;
 }
 
-a {
-	color: white;
+.profile-name {
+	margin: auto;
 }
 
-a:hover {
-	color: white;
-}
-
-.github-btn {
+.profile svg {
+	margin-left: 8px;
 	background-color: #000000;
 	padding: 6px;
-	height: 33px;
 	width: 60px;
 	border-radius: 20px;
-
+	font-size: 21px;
 }
