@@ -14,7 +14,7 @@ export default function Jobs() {
       <Navbar />
 
       <div className="page-header">
-        <h1>Seja Remoto</h1>
+        <div className="header-title--1">Seja Remoto</div>
         <p>
           Compare vagas de emprego remotas, ache sua vaga ideal e trabalhe em
           qualquer lugar do mundo!

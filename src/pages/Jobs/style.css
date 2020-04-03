@@ -1,5 +1,12 @@
 .page-header {
   text-align: center;
+  margin-top: 10px;
+}
+
+.page-header p {
+  font-size: 22px;
+  width: 590px;
+  margin: 16px auto;
 }
 
 .jobs-container {
