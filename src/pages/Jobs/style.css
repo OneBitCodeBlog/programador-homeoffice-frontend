@@ -1,11 +1,12 @@
-.jobs_page {
-  color: white;
-  background-color: rgba(10,10,10,0.4);
-  padding: 20px 0px;
+.page-header {
+  text-align: center;
+  margin-top: 10px;
 }
 
-.container {
-	font-size: 1.4em;
+.page-header p {
+  font-size: 22px;
+  width: 590px;
+  margin: 16px auto;
 }
 
 .jobs-container {
