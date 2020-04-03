@@ -1,0 +1,26 @@
+.container {
+  background-color: rgba(10,10,10,.4);
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+}
+
+.header-title--1, .header-title--2 {
+  font-size: 24px;
+  border-bottom: solid 1px #ffffff;
+  line-height: 50px;
+}
+
+.header-title--1 {
+  width: 410px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+	color: white;
+}

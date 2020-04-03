@@ -4,7 +4,7 @@ nav {
   display: flex;
   height: 50px;
   text-align: center;
-  background-color: rgba(10,10,10,0.4);
+  font-size: 18px;
 }
 
 .nav-buttons {
@@ -18,7 +18,6 @@ nav {
 }
 
 nav a {
-  font-size: 18px;
   color: #FFF;
   text-decoration: none;
 }
