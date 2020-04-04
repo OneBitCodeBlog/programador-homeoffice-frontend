@@ -1,6 +1,6 @@
 import React from 'react';
 import Modali, { useModali } from 'modali';
-import { FaSuitcase, FaMoneyBill, FaLocationArrow } from 'react-icons/fa';
+import { FaSuitcase, FaMoneyBill } from 'react-icons/fa';
 
 import './style.css';
 
@@ -8,9 +8,10 @@ export default function Card({
   title,
   salary,
   contract,
-  key_word,
-  job_link,
-  published_data,}) {
+  keyWord,
+  jobLink,
+  published_data,
+}) {
   const [modal, toggleModal] = useModali({
     title,
     animated: true,
@@ -20,7 +21,7 @@ export default function Card({
         label="Candidatar-se"
         isStyleDefault
         onClick={() => {
-          window.open(job_link, '_blank');
+          window.open(jobLink, '_blank');
         }}
       />,
     ],
@@ -44,10 +45,10 @@ export default function Card({
       <div className="card-locale">{contract}</div>
 
       <div className="card-keywords">
-        {key_word.map((keyWord => (
+        {keyWord.map((keyWord) => (
           <div className="card-keywords" key={keyWord.index}>
             {keyWord}
-          </div>)
+          </div>
         ))}
       </div>
 
@@ -66,10 +67,10 @@ export default function Card({
         </div>
 
         <div className="modal-keywords">
-          {key_word.map((keyWord => (
+          {keyWord.map((keyWord) => (
             <div className="modal-keyword" key={keyWord.index}>
               {keyWord}
-            </div>)
+            </div>
           ))}
         </div>
 
