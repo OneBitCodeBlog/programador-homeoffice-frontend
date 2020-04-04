@@ -5,13 +5,12 @@ import { FaSuitcase, FaMoneyBill, FaLocationArrow } from 'react-icons/fa';
 import './style.css';
 
 export default function Card({
-  imgUrl,
   title,
   salary,
-  location,
-  keywords,
-  link,
-}) {
+  contract,
+  key_word,
+  job_link,
+  published_data,}) {
   const [modal, toggleModal] = useModali({
     title,
     animated: true,
@@ -20,66 +19,64 @@ export default function Card({
       <Modali.Button
         label="Candidatar-se"
         isStyleDefault
-        onClick={() => alert('levar usuário a vaga')}
+        onClick={() => {
+          window.open(job_link, '_blank');
+        }}
       />,
     ],
   });
 
   return (
     <div className="card-container" onClick={toggleModal}>
-      <img className="job-logo" src={imgUrl} alt="Company Logo" />
-
-      <div className="card-mid">
-        <div className="card-text">
-          <FaSuitcase />
-          <span>{title}</span>
-        </div>
-
-        <div className="card-text">
-          <FaMoneyBill />
-          <span>
-            {Intl.NumberFormat('pt-BR', {
-              style: 'currency',
-              currency: 'BRL',
-            }).format(salary)}
-          </span>
-        </div>
-
-        <div className="card-text">{keywords}</div>
+      <div className="card-title">
+        <FaSuitcase />
+        <span>{title}</span>
       </div>
 
-      <div className="card-locale">
-        <FaLocationArrow />
-        {location}
+      <div className="card-salary">
+        <FaMoneyBill />
+        {Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+        }).format(salary)}
+      </div>
+
+      <div className="card-locale">{contract}</div>
+
+      <div className="card-keywords">
+        {key_word.map((keyWord => (
+          <div className="card-keywords" key={keyWord.index}>
+            {keyWord}
+          </div>)
+        ))}
       </div>
 
       <Modali.Modal {...modal}>
-        <section class="row">
-          <section class="col-md-6">
-            <img className="job-logo" src={imgUrl} alt="Company Logo" />
-          </section>
+        <div className="modal-salary">
+          <span>Remuneração: </span>
+          {Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+          }).format(salary)}
+        </div>
 
-          <section class="col-md-6">
-            <div className="card-text">
-              <FaMoneyBill />
-              <span>
-                {Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
-                }).format(salary)}
-              </span>
-            </div>
+        <div className="modal-locale">
+          <span>Contrato: </span>
+          {contract}
+        </div>
 
-            <div className="card-text keywords">{keywords}</div>
+        <div className="modal-keywords">
+          {key_word.map((keyWord => (
+            <div className="modal-keyword" key={keyWord.index}>
+              {keyWord}
+            </div>)
+          ))}
+        </div>
 
-            <div className="card-location">
-              <FaLocationArrow />
-              <span>
-                {location}
-              </span>
-            </div>
-          </section>
-        </section>
+        <div className="modal-publish">
+          <span>Publicada em: </span>
+          {published_data}
+        </div>
       </Modali.Modal>
     </div>
   );
