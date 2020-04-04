@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Autocomplete from 'react-autocomplete';
 
 import './style.css';
 
@@ -6,9 +7,34 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import MessengerIcon from '../../components/MessengerIcon';
 import Card from '../../components/Card';
-import Form from '../../components/Form';
 
 export default function Jobs() {
+  const items = [
+    { id: 'foo', label: 'foo' },
+    { id: 'bar', label: 'bar' },
+    { id: 'baz', label: 'baz' },
+  ];
+
+  const keyOptions = [];
+
+  const usedKeyOptions = [];
+
+  items.map((item) => keyOptions.push(item.label));
+
+  const [keys, setKeys] = useState([]);
+  const [value, setValue] = useState();
+  const [jobs, setJobs] = useState();
+
+  function loadKeys(e) {
+    e.preventDefault();
+
+    if (keyOptions.includes(value)) {
+      usedKeyOptions.push(value);
+    }
+
+    setKeys(usedKeyOptions);
+  }
+
   return (
     <>
       <Navbar />
@@ -21,7 +47,24 @@ export default function Jobs() {
         </p>
       </div>
 
-      <Form />
+      <form className="filter" onSubmit={loadKeys}>
+        <Autocomplete
+          getItemValue={(item) => item.label}
+          items={items}
+          renderItem={(item) => (
+            <div style={{ background: 'white', color: 'black' }}>
+              {item.label}
+            </div>
+          )}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onSelect={(val) => setValue(val)}
+        />
+
+        <button type="submit" className="btn_submit">
+          Adicionar
+        </button>
+      </form>
 
       <div className="jobs-container">
         {[0, 1, 2, 3, 4].map((job) => (

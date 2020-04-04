@@ -54,32 +54,24 @@ export default function Card({
       </div>
 
       <Modali.Modal {...modal}>
-        <section class="row">
-          <section class="col-md-6">
-            <img className="job-logo" src={imgUrl} alt="Company Logo" />
-          </section>
+        <img className="job-logo" src={imgUrl} alt="Company Logo" />
 
-          <section class="col-md-6">
-            <div className="card-text">
-              <FaMoneyBill />
-              <span>
-                {Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
-                }).format(salary)}
-              </span>
-            </div>
+        <div className="card-text">
+          <FaMoneyBill />
+          <span>
+            {Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL',
+            }).format(salary)}
+          </span>
+        </div>
 
-            <div className="card-text keywords">{keywords}</div>
+        <div className="card-text keywords">{keywords}</div>
 
-            <div className="card-location">
-              <FaLocationArrow />
-              <span>
-                {location}
-              </span>
-            </div>
-          </section>
-        </section>
+        <div className="card-location">
+          <FaLocationArrow />
+          <span>{location}</span>
+        </div>
       </Modali.Modal>
     </div>
   );
