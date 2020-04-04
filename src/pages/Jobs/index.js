@@ -71,10 +71,11 @@ export default function Jobs() {
           <Card
             key={job}
             title="Full Stack Engineer"
-            imgUrl="http://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
             salary={2000}
-            location="Araruama, RJ"
-            keywords={['Node.js', 'Ruby+', 'React']}
+            contract="PJ"
+            job_link="https://github.com"
+            key_word={['Node.js', 'Ruby+', 'React']}
+            published_data="03/12/2019"
           />
         ))}
       </div>
