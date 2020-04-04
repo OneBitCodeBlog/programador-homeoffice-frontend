@@ -10,20 +10,47 @@ import Card from '../../components/Card';
 
 export default function Jobs() {
   const items = [
-    { id: 'foo', label: 'foo' },
-    { id: 'bar', label: 'bar' },
-    { id: 'baz', label: 'baz' },
+    { id: 0, label: 'foo' },
+    { id: 1, label: 'bar' },
+    { id: 2, label: 'baz' },
   ];
 
   const keyOptions = [];
 
   const usedKeyOptions = [];
 
+  const jobApi = [
+    {
+      id: 1,
+      title: 'Programador Frontend',
+      published_data: '12/01/2020',
+      salary: 2000,
+      contract: 'PJ',
+      job_link: 'www.example.com',
+      key_word: [
+        { id: 1, tag: 'React' },
+        { id: 2, tag: 'GraphQL' },
+      ],
+    },
+    {
+      id: 1,
+      title: 'Programador Backend',
+      published_data: '12/01/2020',
+      salary: 2000,
+      contract: 'CLT',
+      job_link: 'www.example.com',
+      key_word: [
+        { id: 1, tag: 'Rails' },
+        { id: 2, tag: 'GraphQL' },
+      ],
+    },
+  ];
+
   items.map((item) => keyOptions.push(item.label));
 
+  // eslint-disable-next-line
   const [keys, setKeys] = useState([]);
   const [value, setValue] = useState();
-  const [jobs, setJobs] = useState();
 
   function loadKeys(e) {
     e.preventDefault();
@@ -67,15 +94,15 @@ export default function Jobs() {
       </form>
 
       <div className="jobs-container">
-        {[0, 1, 2, 3, 4].map((job) => (
+        {jobApi.map((job) => (
           <Card
-            key={job}
-            title="Full Stack Engineer"
-            salary={2000}
-            contract="PJ"
-            job_link="https://github.com"
-            key_word={['Node.js', 'Ruby+', 'React']}
-            published_data="03/12/2019"
+            key={job.id}
+            title={job.title}
+            salary={job.salary}
+            contract={job.contract}
+            jobLink={job.job_link}
+            keyWord={job.key_word.map((element) => element.tag)}
+            published_data={job.published_data}
           />
         ))}
       </div>
