@@ -39,6 +39,12 @@ export default function Jobs() {
 
   async function getJobs(e) {
     e.preventDefault();
+
+    const keywords = search
+      .replace(/[^\w\s]/gi, '')
+      .replace(/[0-9]/, '')
+      .replace(/\s\s+/g, ' ')
+      .split(' ');
   }
 
   return (
