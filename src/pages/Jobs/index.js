@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Autocomplete from 'react-autocomplete';
 
 import './style.css';
 
@@ -9,15 +8,7 @@ import MessengerIcon from '../../components/MessengerIcon';
 import Card from '../../components/Card';
 
 export default function Jobs() {
-  const items = [
-    { id: 0, label: 'foo' },
-    { id: 1, label: 'bar' },
-    { id: 2, label: 'baz' },
-  ];
-
-  const keyOptions = [];
-
-  const usedKeyOptions = [];
+  const [search, setSearch] = useState();
 
   const jobApi = [
     {
@@ -46,20 +37,8 @@ export default function Jobs() {
     },
   ];
 
-  items.map((item) => keyOptions.push(item.label));
-
-  // eslint-disable-next-line
-  const [keys, setKeys] = useState([]);
-  const [value, setValue] = useState();
-
-  function loadKeys(e) {
+  async function getJobs(e) {
     e.preventDefault();
-
-    if (keyOptions.includes(value)) {
-      usedKeyOptions.push(value);
-    }
-
-    setKeys(usedKeyOptions);
   }
 
   return (
@@ -74,22 +53,15 @@ export default function Jobs() {
         </p>
       </div>
 
-      <form className="filter" onSubmit={loadKeys}>
-        <Autocomplete
-          getItemValue={(item) => item.label}
-          items={items}
-          renderItem={(item) => (
-            <div style={{ background: 'white', color: 'black' }}>
-              {item.label}
-            </div>
-          )}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onSelect={(val) => setValue(val)}
+      <form className="filter" onSubmit={getJobs}>
+        <input
+          placeholder="Busque por vagas!"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
 
         <button type="submit" className="btn_submit">
-          Adicionar
+          Buscar
         </button>
       </form>
 
