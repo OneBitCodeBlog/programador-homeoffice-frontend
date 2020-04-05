@@ -9,6 +9,10 @@
   width: 64px;
 }
 
+.messenger_div {
+  display: none;
+}
+
 .messenger-text {
   background-color: #ffffff98;
   position: absolute;
