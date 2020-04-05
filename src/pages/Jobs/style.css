@@ -17,26 +17,26 @@
 }
 
 .btn_submit {
-	background: rgba(230,10,10,0.8);
-	border: none;
-	border-radius: 20px;
-	color: white;
-	width: 150px;
+  background: rgba(230, 10, 10, 0.8);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  width: 150px;
 }
 
 .filter {
-	display: flex;
-	margin: auto;
-	max-width: 600px;
-	justify-content: space-between;
+  display: flex;
+  margin: auto;
+  max-width: 600px;
+  justify-content: space-between;
 }
 
 .filter input {
-	padding: 6px 12px;
-	height: 24px;
-	width: 100%;
-	margin-right: 8px;
-	border: none;
-	border-radius: 4.5px;
-	color: #000000;
+  padding: 6px 12px;
+  height: 24px;
+  width: 100%;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4.5px;
+  color: #000000;
 }

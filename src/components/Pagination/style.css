@@ -1,0 +1,21 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.actions button {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(230, 10, 10, 0.8);
+  color: #fff;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  opacity: 0.7;
+}

@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import MessengerIcon from '../../components/MessengerIcon';
 import Card from '../../components/Card';
+import Pagination from '../../components/Pagination';
 
 export default function Jobs() {
   const items = [
@@ -78,6 +79,7 @@ export default function Jobs() {
             published_data="03/12/2019"
           />
         ))}
+        <Pagination />
       </div>
 
       <Footer />
